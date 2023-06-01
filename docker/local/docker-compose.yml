@@ -1,13 +1,13 @@
 version: "3" # docker-composeのバージョンを指定
 services:
   app:
-    container_name: system_design_app
+    container_name: system_design_stuinfo_app
     build:
       context: ../../
       dockerfile: ./docker/local/java/Dockerfile
     working_dir: /app
     volumes:
-      - ../../../system-design-docker:/app:cached
+      - ../../../system-design-docker-stuinfo:/app:cached
     environment:
       JAVA_ENV: development
     ports:
@@ -17,13 +17,13 @@ services:
     command: >
       sh -c '
           ./gradlew
-          wait-for-it.sh system_design_db:3306 --timeout=30 -- ./gradlew tomcatRun
+          wait-for-it.sh system_design_stuinfo_db:3306 --timeout=30 -- ./gradlew tomcatRun
       '
     networks:
-      - system_design-network
+      - system_design_stuinfo-network
 
   mysql:
-    container_name: system_design_db
+    container_name: system_design_stuinfo_db
     platform: linux/x86_64
     build:
       context: ../../
@@ -40,7 +40,7 @@ services:
     volumes:
       - "./mysql/init:/docker-entrypoint-initdb.d"
     networks:
-      - system_design-network
+      - system_design_stuinfo-network
 
   adminer:
     image: adminer:4.6
@@ -50,8 +50,8 @@ services:
     depends_on:
       - mysql
     networks:
-      - system_design-network
+      - system_design_stuinfo-network
 
 networks:
-  system_design-network:
+  system_design_stuinfo-network:
     driver: bridge

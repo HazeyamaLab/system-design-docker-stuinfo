@@ -18,7 +18,7 @@ public class DriverAccessor {
         
         if (JAVA_ENV.equals("development")) {
             // 自分自身のPC内で　docker-compose　立ち上げ
-            DRIVER_URL = "jdbc:mysql://system_design_db:3306/db?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B9:00&rewriteBatchedStatements=true";
+            DRIVER_URL = "jdbc:mysql://system_design_stuinfo_db:3306/db?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B9:00&rewriteBatchedStatements=true";
         } else if (JAVA_ENV.equals("production")) {
             // 本番環境
             DRIVER_URL = "jdbc:mysql://springwork2000g0_db:3306/db?allowPublicKeyRetrieval=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B9:00&rewriteBatchedStatements=true";

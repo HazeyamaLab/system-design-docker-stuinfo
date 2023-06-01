@@ -63,9 +63,9 @@ tomcat() {
     // プロジェクト名(コンテキストパス)
     // http://localhost:8080/ の場合
     if( project.hasProperty('environment') ){
-        contextPath = ""
+        contextPath = "system-design-dev"
     } else {
-        contextPath = ''
+        contextPath = "system-design-dev"
     }
 }
 

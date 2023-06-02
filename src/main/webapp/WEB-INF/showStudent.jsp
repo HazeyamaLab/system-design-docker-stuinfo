@@ -33,5 +33,6 @@ pageEncoding="UTF-8"%>
     </table>
     <br />
     <%}%>
+    <a href="./index.jsp">トップに戻る</a>
   </body>
 </html>

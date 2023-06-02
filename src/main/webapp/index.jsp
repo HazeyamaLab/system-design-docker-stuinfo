@@ -11,6 +11,6 @@ pageEncoding="UTF-8"%>
     </form>
     <br />
     学籍番号によるサーチ
-    <a href="/StuInfo/SearchInfo">Click here! </a>
+    <a href="/system-design-dev/SearchInfo">Click here! </a>
   </body>
 </html>

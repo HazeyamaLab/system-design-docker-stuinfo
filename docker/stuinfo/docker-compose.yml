@@ -1,10 +1,11 @@
 version: "3" # docker-composeのバージョンを指定
+name: stuinfo
 services:
   app:
     container_name: system_design_stuinfo_app
     build:
       context: ../../
-      dockerfile: ./docker/local/java/Dockerfile
+      dockerfile: ./docker/stuinfo/java/Dockerfile
     working_dir: /app
     volumes:
       - ../../../system-design-docker-stuinfo:/app:cached
@@ -27,7 +28,7 @@ services:
     platform: linux/x86_64
     build:
       context: ../../
-      dockerfile: ./docker/local/mysql/Dockerfile
+      dockerfile: ./docker/stuinfo/mysql/Dockerfile
     ports:
       - "3306:3306"
     command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci --default-authentication-plugin=mysql_native_password

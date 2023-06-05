@@ -2,6 +2,20 @@
 
 授業『システム設計』で用いるアプリケーション作成の流れ学習のためのレポジトリ
 
+# 初期設定
+<details>
+<summary> このプロジェクトの初期設定方法 </summary>
+
+### 手順1 プロジェクトのクローン
+Windowsの人はUbuntu, Macの人はターミナルを起動し，以下のコマンドを入力して実行
+```sh
+git clone https://github.com/HazeyamaLab/system-design-docker-stuinfo.git
+```
+以上でプロジェクトのクローンが終了するので，あとはVScodeの操作 -> VScodeでプロジェクトを開く方法に従ってプロジェクトを開けばOK
+
+
+</details>
+
 # VScodeの操作
 ## 基礎的なVScodeの操作方法
 <details>
@@ -12,6 +26,11 @@
 ### 手順1
 Ubuntu(Win)もしくはターミナル(mac)を起動し，以下のコマンドを実行してプロジェクトフォルダに移る
 Stuinfoプロジェクトや課題プロジェクトを開く場合はsystem-design-dockerのディレクトリ名部分を適宜修正
+|  プロジェクト名  |  ディレクトリ名  |
+| ---- | ---- |
+|  動作確認  |  system-design-docker  |
+|  stuinfo  |  system-design-docker-stuinfo  |
+|  課題用テンプレート  |  system-design-docker-your-project  |
 ```sh
 cd system-design-docker
 ```

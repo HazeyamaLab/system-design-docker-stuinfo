@@ -2,11 +2,14 @@
 
 授業『システム設計』で用いるアプリケーション作成の流れ学習のためのレポジトリ
 
-# 初期設定
-<details>
-<summary> このプロジェクトの初期設定方法 </summary>
 
-### 手順1 プロジェクトのクローン
+# VScodeの操作
+## 基礎的なVScodeの操作方法
+<details>
+<summary> VScodeでプロジェクトを開く方法 </summary>
+
+## 初回の設定
+初回起動時のみ以下の手順を行う．<br>
 Windowsの人はUbuntu, Macの人はターミナルを起動し，以下のコマンドを入力して実行
 ```sh
 git clone https://github.com/HazeyamaLab/system-design-docker-stuinfo.git
@@ -14,12 +17,6 @@ git clone https://github.com/HazeyamaLab/system-design-docker-stuinfo.git
 以上でプロジェクトのクローンが終了するので，あとはVScodeの操作 -> VScodeでプロジェクトを開く方法に従ってプロジェクトを開けばOK
 
 
-</details>
-
-# VScodeの操作
-## 基礎的なVScodeの操作方法
-<details>
-<summary> VScodeでプロジェクトを開く方法 </summary>
 
 ## その１(ターミナルから起動)
 

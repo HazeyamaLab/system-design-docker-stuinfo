@@ -18,9 +18,10 @@ git clone https://github.com/HazeyamaLab/system-design-docker-stuinfo.git
 
 
 
-## その１(ターミナルから起動)
+## ターミナルから起動する手法
 
 ### 手順1
+Windowsの人はDocker Desktopを事前に起動しておく．
 Ubuntu(Win)もしくはターミナル(mac)を起動し，以下のコマンドを実行してプロジェクトフォルダに移る
 Stuinfoプロジェクトや課題プロジェクトを開く場合はsystem-design-dockerのディレクトリ名部分を適宜修正
 |  プロジェクト名  |  ディレクトリ名  |
@@ -49,7 +50,7 @@ VScodeをdev-containerで再度開く(gif参照)
 ```
 ![ubuntu](./imgs/vscode-terminal.png "terminal")  
 
-## その2(こっちのほうが楽です)
+## VScodeから起動する手法
 
 VScodeを起動し，ファイル ->  最近使用した項目を開く<br>
 [dev container:system-design-docker]等の開きたい項目をクリックするだけ
@@ -65,7 +66,8 @@ VScodeを起動し，ファイル ->  最近使用した項目を開く<br>
 <summary> Dockerのデータベースを操作する方法 </summary>
 
 ### 前提
-VScode を立ち上げて，dev-containerが立ち上がっている状態であること Docker Desktopを起動して下の画像のように，対象のStack(3つ座布団が重なっているようなアイコン)が緑色になっていればOK
+VScode を立ち上げて，dev-containerが立ち上がっている状態であること
+また，Docker Desktopを起動して下の画像のように，対象のStack(3つ座布団が重なっているようなアイコン)が緑色になっていることを確認する．
 ![ubuntu](./imgs/docker-up.png "terminal")  
 
 ### 手順1 Docker Desktopを起動する

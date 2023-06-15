@@ -1,6 +1,8 @@
 # System-Design-Stuinfo
 
-授業『システム設計』で用いるアプリケーション作成の流れ学習のためのレポジトリ
+授業『システム設計』で用いるアプリケーション作成の流れ学習のためのレポジトリ  
+2023-06-16のオンデマンド授業では，このページのすべての動作確認を行ってください．
+質問があれば，櫨山研究室(中央一号館N101)かTeamsでTA(m228112p [ @ ] st.u-gakugei.ac.jp)に気軽に連絡してください！
 
 
 # VScodeの操作
@@ -10,11 +12,11 @@
 
 ## 初回の設定
 初回起動時のみ以下の手順を行う．<br>
-Windowsの人はUbuntu, Macの人はターミナルを起動し，以下のコマンドを入力して実行
+Windowsの人はUbuntu, Macの人はターミナル(iterm2など)を起動し，以下のコマンドを入力して実行
 ```sh
 git clone https://github.com/HazeyamaLab/system-design-docker-stuinfo.git
 ```
-以上でプロジェクトのクローンが終了するので，あとはVScodeの操作 -> VScodeでプロジェクトを開く方法に従ってプロジェクトを開けばOK
+以上でプロジェクトのクローンが終了するので，次回以降は以下の手順から進めればOK
 
 
 
@@ -23,14 +25,14 @@ git clone https://github.com/HazeyamaLab/system-design-docker-stuinfo.git
 ### 手順1
 Windowsの人はDocker Desktopを事前に起動しておく．
 Ubuntu(Win)もしくはターミナル(mac)を起動し，以下のコマンドを実行してプロジェクトフォルダに移る
-Stuinfoプロジェクトや課題プロジェクトを開く場合はsystem-design-dockerのディレクトリ名部分を適宜修正
+Stuinfoプロジェクトや課題プロジェクトを開く場合はsystem-design-dockerのディレクトリ名部分を適宜修正する．今回はstuinfoを開く．
 |  プロジェクト名  |  ディレクトリ名  |
 | ---- | ---- |
 |  動作確認  |  system-design-docker  |
 |  stuinfo  |  system-design-docker-stuinfo  |
 |  課題用テンプレート  |  system-design-docker-your-project  |
 ```sh
-cd system-design-docker
+cd system-design-docker-stuinfo
 ```
 ### 手順2
 以下のコマンドを実行してVScodeを起動
@@ -39,16 +41,20 @@ code .
 ```
 
 ### 手順3
-VScodeをdev-containerで再度開く(gif参照)
+VScodeをdev-containerで再度開く．右下のウインドウからReopen in containerを選択するか，Ctrl + Shift + pでコマンドパレットを開き，Reopen in Container を入力して選択する(gif参照)
 ![ubuntu](./imgs/open_code.gif "code")
 
 ### 手順4
 手順5  
-画面下部ターミナルで以下のコマンドを実行．もしターミナルが表示されていなければ，上部メニューバーの ターミナル -> 新しいターミナル で出現する．
+VScodeの下部ターミナルで以下のコマンドを実行．もしターミナルが表示されていなければ，上部メニューバーの ターミナル -> 新しいターミナル で出現する．
 ```
 ./gradlew tR
 ```
 ![ubuntu](./imgs/vscode-terminal.png "terminal")  
+
+### 手順5
+ブラウザで http://localhost:8080/system-design-dev/ を開き，アプリケーションが動作していればOK．
+
 
 ## VScodeから起動する手法
 
@@ -74,7 +80,7 @@ VScode を立ち上げて，dev-containerが立ち上がっている状態であ
 もしdev-containerが立ち上がっていない場合は，VScodeの操作方法 -> 手順3を実行すること
 
 ### 手順2 対象のStackからhogehoge-dbというコンテナを開く
-今回システム設計では3つのStack(hello_jsp_servlet / stuinfo / your_project)を配布するので，DB操作を行いたいプロジェクトを選択して， __末尾が-dbとなっているコンテナを選択__ して，Terminalを開く 詳細はGif参照
+今回システム設計では3つのStack(hello_jsp_servlet / stuinfo / your_project)を配布するので，DB操作を行いたいプロジェクト(今回はstuinfo)を選択して， __末尾が-dbとなっているコンテナを選択__ して，Terminalを開く 詳細はGif参照
 ![ubuntu](./imgs/open_db.gif "code")
 
 ### 手順3 MySQLを起動する
@@ -95,6 +101,9 @@ Enter password:と表示されてパスワード入力が求められるので�
 ```
 use db;
 ```
-
-
+例えば
+```
+select * from student_info;
+```
+などが動作していればOK
 </details>

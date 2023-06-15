@@ -5,22 +5,17 @@
 質問があれば，櫨山研究室(中央一号館N101)かTeamsでTA(m228112p [ @ ] st.u-gakugei.ac.jp)に気軽に連絡してください！
 
 
-# VScodeの操作
-## 基礎的なVScodeの操作方法
+# 本日の課題
 <details>
-<summary> VScodeでプロジェクトを開く方法 </summary>
+<summary> VScodeの操作方法 </summary>
 
-## 初回の設定
+### 手順0
 初回起動時のみ以下の手順を行う．<br>
 Windowsの人はUbuntu, Macの人はターミナル(iterm2など)を起動し，以下のコマンドを入力して実行
 ```sh
 git clone https://github.com/HazeyamaLab/system-design-docker-stuinfo.git
 ```
 以上でプロジェクトのクローンが終了するので，次回以降は以下の手順から進めればOK
-
-
-
-## 本日の課題
 
 ### 手順1
 Windowsの人はDocker Desktopを事前に起動しておく．
